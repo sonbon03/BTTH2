@@ -13,7 +13,7 @@
 <body>
 <div class="container">
   <h2>Example: Comment System with Ajax, PHP & MySQL</h2>
-  <form method="POST" id="commentForm" class="d-flex flex-column gap-5 mt-3">
+  <form id="commentForm" class="d-flex flex-column gap-5 mt-3">
     <div class="form-group">
       <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name" required/>
     </div>

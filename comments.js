@@ -5,23 +5,22 @@ $(document).ready(function () {
       method: "POST",
       success: function (response) {
         $('#showComments').html(response);
-        // showComments();
+        showComments();
       }
     })
   }
-  // console.log(showComments());
   showComments();
 
-  $('#commentForm').on('submit', function (event) {
-    event.preventDefault();
+  $('#commentForm').on('submit', function (e) {
+    e.preventDefault();
     var formData = $(this).serialize();
-    console.log(formData);
     $.ajax({
       url: "comments.php",
       method: "POST",
       data: formData,
       dataType: "JSON",
       success: function (response) {
+        // alert(response.error);
         if (!response.error) {
           $('#commentForm')[0].reset();
           $('#message').html(response.message);

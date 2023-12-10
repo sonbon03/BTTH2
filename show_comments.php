@@ -22,7 +22,7 @@ try {
 
 //        $commentHTML .= getCommentReply($conn, $comment["id"]);
     }
-    echo "kieu 1: " .  $commentHTML;
+    echo $commentHTML;
 
 
 

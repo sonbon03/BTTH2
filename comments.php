@@ -1,6 +1,6 @@
 <?php
-global $connection;
 require_once ("pdo_connect.php");
+global $connection;
 if(!empty($_POST["name"]) && !empty($_POST["comment"])){
     $insertComments = "INSERT INTO comment (parent_id, comment, sender) VALUES (:parent_id, :comment, :sender)";
     $statement = $connection->prepare($insertComments);
@@ -24,5 +24,5 @@ if(!empty($_POST["name"]) && !empty($_POST["comment"])){
         'message' => $message
     );
 }
-//echo json_encode($status);
+echo json_encode($status);
 ?>

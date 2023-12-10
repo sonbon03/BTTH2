@@ -12,7 +12,6 @@ $options = [
 $dsn = "mysql:host=$host;port=$port;dbname=$db";
 try {
     $connection = new PDO($dsn, $user, $pass, $options);
-    echo "connected";
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
